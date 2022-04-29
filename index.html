@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/58a488c3c5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Notes app</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="header_title">Notes</h1>
+        <div id="input-icons">
+          <input type="text" id="search-text" placeholder="search notes" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </header>
+      <div id="notes"></div>
+      <footer class="footer">
+        <i class="fa-solid fa-plus 2 fa-2xl" id="add-note"></i>
+        <div class="footer-inputs">
+          <input type="text" id="input-title" placeholder="title" />
+          <input type="text" id="input-body" placeholder="body" />
+        </div>
+      </footer>
+    </div>
+    <script src="notes-app.js"></script>
+  </body>
+</html>
