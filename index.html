@@ -20,8 +20,10 @@
   <body>
     <div class="container">
       <header class="header">
-        <h1 class="header_title">Notes</h1>
-        <i class="fa-solid fa-pencil" id="edit-btn"></i>
+        <div class="notes-edit">
+          <h1 class="header_title">Notes</h1>
+          <i class="fa-solid fa-pencil" id="edit-btn"></i>
+        </div>
         <div id="input-icons">
           <input type="text" id="search-text" placeholder="search notes" />
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -32,7 +34,12 @@
         <i class="fa-solid fa-plus 2 fa-2xl" id="add-note"></i>
         <div class="footer-inputs">
           <input type="text" id="input-title" placeholder="title" />
-          <input type="text" id="input-body" placeholder="body" />
+          <textarea
+            rows="2"
+            type="text"
+            id="input-body"
+            placeholder="body"
+          ></textarea>
         </div>
       </footer>
     </div>

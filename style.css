@@ -27,28 +27,33 @@ h2 {
 .header {
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
 }
-
+.notes-edit {
+  display: flex;
+  align-items: flex-end;
+}
 #search-text,
 #input-title,
 #input-body {
   border: 0;
   outline: none;
   border-radius: 5px;
-  /* width: 30%; */
   padding: 10px;
   opacity: 0.7;
-  /* margin: 0; */
+  max-width: 90%;
+  overflow-wrap: break-word;
+  resize: vertical;
+  font-family: inherit;
+  min-height: 16px;
 }
 #input-title,
 #input-body {
   margin: 7px;
 }
+
 #input-icons {
-  width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: flex-end;
 }
 
@@ -108,11 +113,29 @@ h2 {
   max-width: 90%;
   overflow-wrap: break-word;
 }
+
+.fa-pencil {
+  padding: 10px;
+  color: #354f52;
+}
+
 /* trash icon */
 .fa-trash {
-  opacity: 0;
+  display: none;
 }
-#del-btn:active {
+
+.fa-toggled {
+  display: block;
+}
+
+/* .note:hover > .fa-trash {
+  opacity: 0.2;
+}
+.note > .fa-trash:hover {
+  opacity: 1;
+} */
+
+.fa-trash:active {
   color: #354f52;
 }
 /*

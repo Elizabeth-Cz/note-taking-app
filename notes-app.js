@@ -23,22 +23,9 @@ const createNote = function (note) {
   noteTextDiv.append(noteTitleEl, noteBodyEl);
   const deleteIcon = document.createElement("i");
   deleteIcon.setAttribute("class", "fa-solid fa-trash");
-  deleteIcon.setAttribute("id", "del-btn");
   newNoteDiv.append(noteTextDiv, deleteIcon);
   document.querySelector("#notes").appendChild(newNoteDiv);
 };
-
-// const lastNote = function (note) {
-//   note = notes[notes.length - 1];
-//   const newNoteDiv = document.createElement("div");
-//   newNoteDiv.setAttribute("class", "note");
-//   const noteTitleEl = document.createElement("h2");
-//   noteTitleEl.textContent = note.title;
-//   const noteBodyEl = document.createElement("p");
-//   noteBodyEl.textContent = note.body;
-// document.querySelector("#notes").appendChild(newNoteDiv);
-//   newNoteDiv.appendChild(noteTitleEl).appendChild(noteBodyEl);
-// };
 
 // reset function
 const reset = function () {
@@ -80,27 +67,18 @@ addBtn.addEventListener("click", function () {
   }
 });
 
-//delete button
-// const getDelInd = function () {
-//   console.log(notes.indexOf(deleteIcon));
-// };
+const editToggle = document.querySelector(".fa-pencil");
 
-document.getElementById("edit-btn").addEventListener("click", function (e) {
-  console.log(e.target);
+editToggle.addEventListener("click", function () {
+  document.querySelectorAll(".fa-trash").forEach((icon) => {
+    icon.classList.toggle("fa-toggled");
+  });
 });
 
-// const editBtn = document.querySelector(".fa-pencil");
-
-// editBtn.addEventListener("click", function (e) {
-//   // console.log(e.target);
-//   DelBtn =   document.querySelectorAll(".fa-trash")
-// .style.fontSize = "16px";
-// });
-
-// const DelBtn = document.addEventListener("click", function (e) {
-//   if (e.target.classList.contains("fa-trash")) {
-//     setTimeout(function () {
-//       e.target.parentElement.remove();
-//     }, 200);
-//   }
-// });
+const delBtn = document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("fa-trash")) {
+    setTimeout(function () {
+      e.target.parentElement.remove();
+    }, 200);
+  }
+});
