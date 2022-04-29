@@ -7,19 +7,21 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-y: hidden;
 }
 
 h1,
 h2 {
-  margin: 0 5px 0 0;
+  margin: 0;
 }
 h1 {
   font-weight: 300;
 }
 
 h2 {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
+  margin: 0 0 0.7rem;
 }
 
 .header {
@@ -36,7 +38,7 @@ h2 {
   /* width: 30%; */
   padding: 10px;
   opacity: 0.7;
-  margin: 0;
+  /* margin: 0; */
 }
 #input-title,
 #input-body {
@@ -92,6 +94,7 @@ h2 {
   flex-grow: 1;
 }
 .note {
+  width: inherit;
   margin: 12px 0;
   padding: 1rem;
   background-color: #84a98c;
@@ -101,22 +104,26 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
-
+.note-text {
+  max-width: 90%;
+  overflow-wrap: break-word;
+}
 /* trash icon */
 .fa-trash {
-  opacity: 0;
+  font-size: 0;
 }
-
-.note:hover > .fa-trash {
+#del-btn:active {
+  color: #354f52;
+}
+/*
+.note:hover > #del-btn {
   opacity: 0.3;
 }
-.note > .fa-trash:hover {
+.note > #del-btn:hover {
   opacity: 1;
 }
 
-.fa-trash:active {
-  color: #354f52;
-}
+*/
 
 #add-note {
   margin: 1rem;
