@@ -110,7 +110,7 @@ h2 {
 }
 /* trash icon */
 .fa-trash {
-  font-size: 0;
+  opacity: 0;
 }
 #del-btn:active {
   color: #354f52;

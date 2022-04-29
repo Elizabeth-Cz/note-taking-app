@@ -84,17 +84,23 @@ addBtn.addEventListener("click", function () {
 // const getDelInd = function () {
 //   console.log(notes.indexOf(deleteIcon));
 // };
-const editBtn = document.querySelector(".fa-pencil");
 
-editBtn.addEventListener("click", function (e) {
-  // console.log(e.target);
-  document.querySelector("#del-btn").style.fontSize = "16px";
+document.getElementById("edit-btn").addEventListener("click", function (e) {
+  console.log(e.target);
 });
 
-const DelBtn = document.addEventListener("click", function (e) {
-  if (e.target.id === "del-btn") {
-    setTimeout(function () {
-      e.target.parentElement.remove();
-    }, 200);
-  }
-});
+// const editBtn = document.querySelector(".fa-pencil");
+
+// editBtn.addEventListener("click", function (e) {
+//   // console.log(e.target);
+//   DelBtn =   document.querySelectorAll(".fa-trash")
+// .style.fontSize = "16px";
+// });
+
+// const DelBtn = document.addEventListener("click", function (e) {
+//   if (e.target.classList.contains("fa-trash")) {
+//     setTimeout(function () {
+//       e.target.parentElement.remove();
+//     }, 200);
+//   }
+// });
