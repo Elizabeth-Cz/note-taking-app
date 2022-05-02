@@ -20,25 +20,28 @@
   <body>
     <div class="container">
       <header class="header">
-        <div class="notes-edit">
-          <h1 class="header_title">Notes</h1>
-          <i class="fa-solid fa-pencil" id="edit-btn"></i>
-        </div>
-        <div id="input-icons">
-          <input type="text" id="search-text" placeholder="search notes" />
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
+        <h1 class="header_title">Notes</h1>
+        <i class="fa-solid fa-pencil" id="edit-btn"></i>
+        <input type="text" id="search-text" placeholder="Search notes" />
+        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
       </header>
+      <div class="container-swatches">
+        <input type="radio" class="swatch" id="red" name="swatch" />
+        <input type="radio" class="swatch" id="teal" name="swatch" />
+        <input type="radio" class="swatch" id="purple" name="swatch" />
+        <input type="radio" class="swatch" id="yellow" name="swatch" />
+        <input type="radio" class="swatch" id="green" name="swatch" />
+      </div>
       <div id="notes"></div>
       <footer class="footer">
         <i class="fa-solid fa-plus 2 fa-2xl" id="add-note"></i>
         <div class="footer-inputs">
           <input type="text" id="input-title" placeholder="title" />
           <textarea
-            rows="2"
             type="text"
             id="input-body"
             placeholder="body"
+            rows="2"
           ></textarea>
         </div>
       </footer>
