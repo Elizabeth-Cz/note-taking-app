@@ -192,64 +192,69 @@ html {
 
 /* HAVING FUN */
 
-.container-swatches {
+.radio-toolbar {
   display: none;
 }
-.container-swatches-on {
+.radio-toolbar-on {
   display: flex;
-  flex-direction: row;
-  flex-basis: 100%;
-  height: 0;
+  width: min-content;
+  justify-content: space-between;
+  /* padding: 5px; */
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 0 0.5rem 0.5rem;
 }
 
-/* .swatch {
-  margin: 4px;
-  width: 15px;
-  height: 15px;
-  border-radius: 0px 25%;
-} */
-
-#red {
+.radio-toolbar-on input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+.radio-toolbar-on label {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 0 25%;
+  margin: 5px;
+}
+#gray + label {
+  border: 1px solid gray;
+}
+#red + label {
+  background-color: rgba(255, 138, 155, 0.3);
+}
+/* #red:hover + label, */
+#red,
+#red:checked + label {
   background: linear-gradient(286.17deg, #ff3333 36.98%, #ff8a9b 100%);
 }
-#teal {
+#teal + label {
+  background-color: rgba(0, 150, 137, 0.3);
+}
+/* #teal:hover + label, */
+#teal,
+#teal:checked + label {
   background: linear-gradient(286.17deg, #009689 36.98%, #47fff0 100%);
 }
-
-#purple {
+#purple + label {
+  background-color: rgba(103, 58, 179, 0.3);
+}
+/* #purple:hover + label, */
+#purple,
+#purple:checked + label {
   background: linear-gradient(286.17deg, #673ab3 36.98%, #a284d7 100%);
 }
-
-#yellow {
+#yellow + label {
+  background-color: rgba(255, 192, 45, 0.3);
+}
+/* #yellow:hover + label, */
+#yellow,
+#yellow:checked + label {
   background: linear-gradient(286.17deg, #ffc02d 36.98%, #ffdc8a 100%);
 }
-
-#green {
+#green + label {
+  background-color: rgba(74, 175, 87, 0.3);
+}
+/* #green:hover + label, */
+#green,
+#green:checked + label {
   background: linear-gradient(286.17deg, #4aaf57 36.98%, #88cd92 100%);
-}
-
-/* margin: 4px;
-width: 15px;
-height: 15px;
-border-radius: 0px 25%; */
-
-.container-swatches-on input {
-  padding: 10px;
-  font: inherit;
-  color: currentColor;
-  width: 1.15em;
-  height: 1.15em;
-  border-radius: 0 25%;
-  opacity: 0.5;
-  /* Add if not using autoprefixer */
-  -webkit-appearance: none;
-  appearance: none;
-  /* For iOS < 15 to remove gradient background */
-  background-color: #fff;
-  /* Not removed via appearance */
-  margin: 0 5px;
-}
-input[type="radio"]::before {
-  content: "";
-  opacity: 1;
 }
